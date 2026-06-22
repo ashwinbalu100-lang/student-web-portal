@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <div class="sidebar">
+        <h2>Student Portal</h2>
+
+        <ul>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/marks">Marks</a></li>
+            <li><a href="/attendance">Attendance</a></li>
+            <li><a href="/announcements">Announcements</a></li>
+            <li><a href="/">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+
+        <div class="profile-card">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Student">
+
+            <h2>{{ student.name }}</h2>
+
+<table>
+    <tr>
+        <td><strong>Register No</strong></td>
+        <td>{{ student.reg_no }}</td>
+    </tr>
+
+    <tr>
+        <td><strong>Department</strong></td>
+        <td>{{ student.department }}</td>
+    </tr>
+
+    <tr>
+        <td><strong>Year</strong></td>
+        <td>{{ student.year }}</td>
+    </tr>
+
+    <tr>
+        <td><strong>Email</strong></td>
+        <td>{{ student.email }}</td>
+    </tr>
+
+    <tr>
+        <td><strong>Phone</strong></td>
+        <td>{{ student.phone }}</td>
+    </tr>
+</table>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

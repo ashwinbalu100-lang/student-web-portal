@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="login-container">
+
+    <div class="login-box">
+
+        <h2>Student Login</h2>
+        <p>Access your student dashboard</p>
+
+        <form action="/login" method="POST">
+
+            <div class="input-group">
+                <label>Register Number</label>
+                <input type="text" name="reg_no" placeholder="Enter Register Number" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter Password" required>
+            </div>
+
+            <button type="submit">Login</button>
+
+        </form>
+
+        <a href="/" class="back-home">← Back Home</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

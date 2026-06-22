@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <div class="sidebar">
+        <h2>Student Portal</h2>
+
+        <ul>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/marks">Marks</a></li>
+            <li><a href="/attendance">Attendance</a></li>
+            <li><a href="/announcements">Announcements</a></li>
+            <li><a href="/">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+
+        <h1>Welcome, {{ name }}</h1>
+
+        <div class="cards">
+
+            <div class="dashboard-card">
+                <h3>Attendance</h3>
+                <p>92%</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>CGPA</h3>
+                <p>8.5</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Subjects</h3>
+                <p>6</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Announcements</h3>
+                <p>4</p>
+            </div>
+
+        </div>
+
+        <div class="notice-board">
+            <h2>Latest Announcements</h2>
+
+            <ul>
+                <li>Semester Exams start next month.</li>
+                <li>Project Review on Friday.</li>
+                <li>Attendance shortage list published.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Announcements</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <div class="sidebar">
+        <h2>Student Portal</h2>
+
+        <ul>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/marks">Marks</a></li>
+            <li><a href="/attendance">Attendance</a></li>
+            <li><a href="/announcements">Announcements</a></li>
+        </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <h1>Current Announcements</h1>
+
+        {% for a in announcements %}
+        <div class="card">
+
+            <h3>{{ a[1] }}</h3>
+            <p>{{ a[2] }}</p>
+            <small>{{ a[3] }}</small>
+
+        </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
+<div class="main-content">
+
+<h1>Announcements</h1>
+
+<div class="notice-board">
+
+<h3>Project Review</h3>
+<p>Project review will be conducted on Friday.</p>
+
+<hr>
+
+<h3>Semester Exam</h3>
+<p>Semester exams begin next month.</p>
+
+<hr>
+
+<h3>Placement Drive</h3>
+<p>Upcoming placement drive next week.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Marks</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<style>
+    .marks-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .marks-table th {
+        background: #007bff;
+        color: white;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .marks-table td {
+        padding: 12px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .marks-table tr:hover {
+        background: #f5f5f5;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }
+</style>
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <div class="sidebar">
+        <h2>Student Portal</h2>
+        <ul>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/marks">Marks</a></li>
+            <li><a href="/attendance">Attendance</a></li>
+            <li><a href="/announcements">Announcements</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+
+        <h1>Your Marks</h1>
+
+        {% if marks %}
+
+        <table class="marks-table">
+
+            <tr>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+
+            {% for m in marks %}
+            <tr>
+                <td>{{ m[0] }}</td>
+                <td>{{ m[1] }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+        {% else %}
+            <p>No marks available</p>
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+</html>
+</html>

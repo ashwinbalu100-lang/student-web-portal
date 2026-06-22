@@ -1,0 +1,15 @@
+<h2>Add Announcement</h2>
+
+{% if request.args.get('success') %}
+<p style="color:green;">Announcement added successfully</p>
+{% endif %}
+
+<form method="POST">
+
+<input type="text" name="title" placeholder="Title"><br><br>
+
+<textarea name="description" placeholder="Description"></textarea><br><br>
+
+<button type="submit">Post</button>
+
+</form>

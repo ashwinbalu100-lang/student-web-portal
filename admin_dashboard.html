@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+<div class="sidebar">
+
+<h2>Admin Panel</h2>
+
+<ul>
+<li><a href="/add_student">Add Student</a></li>
+<li><a href="/add_marks">Add Marks</a></li>
+<li><a href="/add_attendance">Add Attendance</a></li>
+<li><a href="/add_announcement">Add Announcement</a></li>
+</ul>
+
+</div>
+
+<div class="main-content">
+
+<h1>Admin Dashboard</h1>
+
+<div class="cards">
+
+<div class="dashboard-card">
+<h3>Total Students</h3>
+<p>{{ total_students }}</p>
+</div>
+
+<div class="dashboard-card">
+<h3>Total Departments</h3>
+<p>{{ total_departments }}</p>
+</div>
+
+<div class="dashboard-card">
+<h3>Announcements</h3>
+<p>{{ total_announcements }}</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
